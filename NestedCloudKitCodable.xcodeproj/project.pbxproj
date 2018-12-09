@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A65D4721BD64DC00C30B13 /* NestedCludKitCodable_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 07A65D4521BD64DC00C30B13 /* NestedCludKitCodable_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A65D4B21BD652500C30B13 /* NestedCloudKitCodable.h in Headers */ = {isa = PBXBuildFile; fileRef = 635FE1E721B05A7400C2BC5F /* NestedCloudKitCodable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07A65D4C21BD652A00C30B13 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 635FE1E821B05A7400C2BC5F /* Info.plist */; };
+		07A65D4D21BD652D00C30B13 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1F021B05AAB00C2BC5F /* Constants.swift */; };
+		07A65D4E21BD652F00C30B13 /* BoxedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1F121B05AAB00C2BC5F /* BoxedArray.swift */; };
+		07A65D4F21BD653600C30B13 /* CKEncoderUnkeyedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1F321B05AAB00C2BC5F /* CKEncoderUnkeyedContainer.swift */; };
+		07A65D5021BD653600C30B13 /* CKEncoderKeyedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1F421B05AAB00C2BC5F /* CKEncoderKeyedContainer.swift */; };
+		07A65D5121BD653600C30B13 /* CKKeyedEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1F521B05AAB00C2BC5F /* CKKeyedEncoder.swift */; };
+		07A65D5221BD653600C30B13 /* CKEncoderSingleValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1F621B05AAB00C2BC5F /* CKEncoderSingleValueContainer.swift */; };
+		07A65D5321BD653600C30B13 /* CKRecordEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1F721B05AAB00C2BC5F /* CKRecordEncoder.swift */; };
+		07A65D5421BD653E00C30B13 /* CKDecoderUnkeyedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1F921B05AAB00C2BC5F /* CKDecoderUnkeyedContainer.swift */; };
+		07A65D5521BD653E00C30B13 /* CKDecoderKeyedContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1FA21B05AAB00C2BC5F /* CKDecoderKeyedContainer.swift */; };
+		07A65D5621BD653E00C30B13 /* CKDecoderSingleValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1FB21B05AAB00C2BC5F /* CKDecoderSingleValueContainer.swift */; };
+		07A65D5721BD653E00C30B13 /* CKRecordDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1FC21B05AAB00C2BC5F /* CKRecordDecoder.swift */; };
+		07A65D5821BD654300C30B13 /* Array+CKRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1FE21B05AAB00C2BC5F /* Array+CKRecord.swift */; };
+		07A65D5921BD654300C30B13 /* CKRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE1FF21B05AAB00C2BC5F /* CKRecord.swift */; };
+		07A65D5A21BD654E00C30B13 /* CKRecordRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE20021B05AAB00C2BC5F /* CKRecordRepresentable.swift */; };
+		07A65D5B21BD655200C30B13 /* CKCodableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635FE20221B05AAB00C2BC5F /* CKCodableError.swift */; };
 		631B8A0321A6E4FB0045FADC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631B8A0221A6E4FB0045FADC /* AppDelegate.swift */; };
 		631B8A0521A6E4FB0045FADC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631B8A0421A6E4FB0045FADC /* ViewController.swift */; };
 		631B8A0821A6E4FB0045FADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631B8A0621A6E4FB0045FADC /* Main.storyboard */; };
@@ -143,6 +161,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07A65D4321BD64DC00C30B13 /* NestedCloudKitCodable_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NestedCloudKitCodable_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A65D4521BD64DC00C30B13 /* NestedCludKitCodable_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NestedCludKitCodable_macOS.h; sourceTree = "<group>"; };
+		07A65D4621BD64DC00C30B13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		631B8A0021A6E4FB0045FADC /* NestedCKCodableExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedCKCodableExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		631B8A0221A6E4FB0045FADC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		631B8A0421A6E4FB0045FADC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +209,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		07A65D4021BD64DC00C30B13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		631B89FD21A6E4FB0045FADC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +250,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07A65D4421BD64DC00C30B13 /* NestedCKCloudKitCodable-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				07A65D4521BD64DC00C30B13 /* NestedCludKitCodable_macOS.h */,
+				07A65D4621BD64DC00C30B13 /* Info.plist */,
+			);
+			path = "NestedCKCloudKitCodable-macOS";
+			sourceTree = "<group>";
+		};
 		631B8A0121A6E4FB0045FADC /* NestedCKCodableExamples */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +368,7 @@
 				635FE1EF21B05AAB00C2BC5F /* Sources */,
 				635FE22C21B05D6300C2BC5F /* NestedCKCodableWatch */,
 				635FE23B21B05D6500C2BC5F /* NestedCKCodableWatch Extension */,
+				07A65D4421BD64DC00C30B13 /* NestedCKCloudKitCodable-macOS */,
 				639C8E4821A6E154006148E4 /* Products */,
 				631B8A1821A6E5690045FADC /* Frameworks */,
 			);
@@ -344,6 +382,7 @@
 				635FE1E521B05A7300C2BC5F /* NestedCloudKitCodable.framework */,
 				635FE22B21B05D6300C2BC5F /* NestedCKCodableWatch.app */,
 				635FE23721B05D6500C2BC5F /* NestedCKCodableWatch Extension.appex */,
+				07A65D4321BD64DC00C30B13 /* NestedCloudKitCodable_macOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -361,6 +400,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		07A65D3E21BD64DC00C30B13 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A65D4721BD64DC00C30B13 /* NestedCludKitCodable_macOS.h in Headers */,
+				07A65D4B21BD652500C30B13 /* NestedCloudKitCodable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		635FE1C221B05A3E00C2BC5F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -380,6 +428,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		07A65D4221BD64DC00C30B13 /* NestedCloudKitCodable-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A65D4A21BD64DC00C30B13 /* Build configuration list for PBXNativeTarget "NestedCloudKitCodable-macOS" */;
+			buildPhases = (
+				07A65D3E21BD64DC00C30B13 /* Headers */,
+				07A65D3F21BD64DC00C30B13 /* Sources */,
+				07A65D4021BD64DC00C30B13 /* Frameworks */,
+				07A65D4121BD64DC00C30B13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NestedCloudKitCodable-macOS";
+			productName = "NestedCludKitCodable-macOS";
+			productReference = 07A65D4321BD64DC00C30B13 /* NestedCloudKitCodable_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		631B89FF21A6E4FB0045FADC /* NestedCKCodableExamples */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 631B8A1121A6E4FD0045FADC /* Build configuration list for PBXNativeTarget "NestedCKCodableExamples" */;
@@ -484,6 +550,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Guilherme Girotto";
 				TargetAttributes = {
+					07A65D4221BD64DC00C30B13 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					631B89FF21A6E4FB0045FADC = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -524,6 +593,7 @@
 			targets = (
 				631B89FF21A6E4FB0045FADC /* NestedCKCodableExamples */,
 				635FE1E421B05A7300C2BC5F /* NestedCloudKitCodable-iOS */,
+				07A65D4221BD64DC00C30B13 /* NestedCloudKitCodable-macOS */,
 				635FE1C621B05A3E00C2BC5F /* NestedCloudKitCodable-watchOS */,
 				635FE22A21B05D6300C2BC5F /* NestedCKCodableWatch */,
 				635FE23621B05D6500C2BC5F /* NestedCKCodableWatch Extension */,
@@ -532,6 +602,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		07A65D4121BD64DC00C30B13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A65D4C21BD652A00C30B13 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		631B89FE21A6E4FB0045FADC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,6 +656,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		07A65D3F21BD64DC00C30B13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07A65D5921BD654300C30B13 /* CKRecord.swift in Sources */,
+				07A65D5221BD653600C30B13 /* CKEncoderSingleValueContainer.swift in Sources */,
+				07A65D4E21BD652F00C30B13 /* BoxedArray.swift in Sources */,
+				07A65D5621BD653E00C30B13 /* CKDecoderSingleValueContainer.swift in Sources */,
+				07A65D5121BD653600C30B13 /* CKKeyedEncoder.swift in Sources */,
+				07A65D4D21BD652D00C30B13 /* Constants.swift in Sources */,
+				07A65D5721BD653E00C30B13 /* CKRecordDecoder.swift in Sources */,
+				07A65D5A21BD654E00C30B13 /* CKRecordRepresentable.swift in Sources */,
+				07A65D5321BD653600C30B13 /* CKRecordEncoder.swift in Sources */,
+				07A65D5521BD653E00C30B13 /* CKDecoderKeyedContainer.swift in Sources */,
+				07A65D4F21BD653600C30B13 /* CKEncoderUnkeyedContainer.swift in Sources */,
+				07A65D5421BD653E00C30B13 /* CKDecoderUnkeyedContainer.swift in Sources */,
+				07A65D5821BD654300C30B13 /* Array+CKRecord.swift in Sources */,
+				07A65D5021BD653600C30B13 /* CKEncoderKeyedContainer.swift in Sources */,
+				07A65D5B21BD655200C30B13 /* CKCodableError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		631B89FC21A6E4FB0045FADC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -697,6 +797,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		07A65D4821BD64DC00C30B13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/NestedCKCloudKitCodable-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.guilhermegirotto.NestedCloudKitCodable-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		07A65D4921BD64DC00C30B13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/NestedCKCloudKitCodable-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.guilhermegirotto.NestedCloudKitCodable-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 		631B8A0F21A6E4FD0045FADC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -746,7 +902,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 583UZTNE98;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -774,7 +930,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 583UZTNE98;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -802,7 +958,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 583UZTNE98;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -828,7 +984,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 583UZTNE98;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1054,6 +1210,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		07A65D4A21BD64DC00C30B13 /* Build configuration list for PBXNativeTarget "NestedCloudKitCodable-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07A65D4821BD64DC00C30B13 /* Debug */,
+				07A65D4921BD64DC00C30B13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		631B8A1121A6E4FD0045FADC /* Build configuration list for PBXNativeTarget "NestedCKCodableExamples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
