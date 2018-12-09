@@ -28,6 +28,7 @@ build/
 DerivedData/
 
 ## Various settings
+xcuserdata/*
 *.xcuserstate
 *.pbxuser
 !default.pbxuser
