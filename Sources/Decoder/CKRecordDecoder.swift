@@ -36,17 +36,18 @@ public class CKRecordDecoder {
         
         fetchAllAssociatedRecords(fromReferences: record.references,
                                   recordsStack: [record],
-                                  referenceDatabase: database) { (records, error) in
-            if let error = error {
-                completion(.error(error))
-            } else if let records = records {
+                                  referenceDatabase: database) { result in
+            switch result {
+            case .success(let records):
                 let decoder = _CKRecordDecoder(records: records)
                 do {
                     let decodedValue = try T(from: decoder)
                     completion(.success(decodedValue))
-                } catch let error as CKCodableError {
+                } catch {
                     completion(.error(error))
-                } catch { }
+                }
+            case .error(let error):
+                completion(.error(error))
             }
         }
     }
@@ -61,12 +62,11 @@ public class CKRecordDecoder {
     private func fetchAllAssociatedRecords(fromReferences references: [CKRecord.Reference],
                                            recordsStack records: [CKRecord],
                                            referenceDatabase database: CKDatabase,
-                                           completion: @escaping ([CKRecord]?, CKCodableError?) -> Void) {
+                                           completion: @escaping (Result<[CKRecord]>) -> Void) {
         let query = CKFetchRecordsOperation(recordIDs: references.map { $0.recordID })
         query.fetchRecordsCompletionBlock = { (recordsDictionary, error) in
-            if let receivedError = error {
-                let error = CKCodableError.error(fromCloudkitError: receivedError)
-                completion(nil, error)
+            if let error = error {
+                completion(.error(error))
                 return
             }
             
@@ -80,7 +80,7 @@ public class CKRecordDecoder {
                 
             } else {
                 let error = CKCodableError(.cloudkitInconsistence)
-                completion(nil, error)
+                completion(.error(error))
             }
         }
         database.add(query)
@@ -95,7 +95,7 @@ public class CKRecordDecoder {
     private func fetchReferences(fromRecords records: [CKRecord],
                                  andAppendTo recordsStack: [CKRecord],
                                  withReferenceDatabase database: CKDatabase,
-                                 completion: @escaping ([CKRecord]?, CKCodableError?) -> Void) {
+                                 completion: @escaping (Result<[CKRecord]>) -> Void) {
         
         var actualRecordsStack = recordsStack
         actualRecordsStack.append(contentsOf: records)
@@ -108,7 +108,7 @@ public class CKRecordDecoder {
         }
         
         if existantReferences.isEmpty {
-            completion(actualRecordsStack, nil)
+            completion(.success(actualRecordsStack))
         } else {
             fetchAllAssociatedRecords(fromReferences: existantReferences,
                                       recordsStack: recordsStack,

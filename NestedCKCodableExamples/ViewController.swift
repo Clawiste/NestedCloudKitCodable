@@ -73,9 +73,12 @@ class ViewController: UIViewController {
     private func decodeSchool(_ schoolRecord: CKRecord) {
         CKRecordDecoder().decode(School.self,
                                  from: schoolRecord,
-                                 referenceDatabase: database) { (decodedSchool, error) in
-            if let decodedSchool = decodedSchool {
+                                 referenceDatabase: database) { result in
+            switch result {
+            case .success(let decodedSchool):
                 print(decodedSchool)
+            case .error(let error):
+                print(error)
             }
         }
     }
