@@ -9,6 +9,11 @@
 import Foundation
 import CloudKit
 
+public enum Result<T> {
+    case success(T)
+    case error(Error)
+}
+
 public class CKRecordDecoder {
     
     public init() { }
@@ -27,20 +32,20 @@ public class CKRecordDecoder {
     public func decode<T>(_ type: T.Type,
                    from record: CKRecord,
                    referenceDatabase database: CKDatabase,
-                   completion: @escaping (_ result: T?, _ error: CKCodableError?) -> Void) where T: Decodable {
+                   completion: @escaping (_ result: Result<T>) -> Void) where T: Decodable {
         
         fetchAllAssociatedRecords(fromReferences: record.references,
                                   recordsStack: [record],
                                   referenceDatabase: database) { (records, error) in
             if let error = error {
-                completion(nil, error)
+                completion(.error(error))
             } else if let records = records {
                 let decoder = _CKRecordDecoder(records: records)
                 do {
                     let decodedValue = try T(from: decoder)
-                    completion(decodedValue, nil)
+                    completion(.success(decodedValue))
                 } catch let error as CKCodableError {
-                    completion(nil, error)
+                    completion(.error(error))
                 } catch { }
             }
         }
