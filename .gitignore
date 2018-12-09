@@ -28,6 +28,7 @@ build/
 DerivedData/
 
 ## Various settings
+*.xcuserstate
 *.pbxuser
 !default.pbxuser
 *.mode1v3
