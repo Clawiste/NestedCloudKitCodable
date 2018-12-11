@@ -10,16 +10,11 @@ import Foundation
 import NestedCloudKitCodable
 
 struct Book: CKCodable {
-    
     var cloudKitRecordType: String {
         return "Book"
     }
-    
-    var cloudKitIdentifier: String {
-        return id
-    }
-    
-    var id = UUID().uuidString
+        
+    var id: String
     var title: String
     var pages: Int
     var available: Bool

@@ -11,7 +11,7 @@ import CloudKit
 
 public protocol CKRecordRepresentable {
     var cloudKitRecordType: String { get }
-    var cloudKitIdentifier: String { get }
+    var id: String { get }
     
     func ignoredProperties() -> [String]
 }

@@ -49,7 +49,18 @@ extension CKDecoderKeyedContainer {
     }
     
     func decode<T>(_ type: T.Type, forKey key: Key) throws -> T where T: Decodable {
-        try checkCanDecodeValue(forKey: key)
+        if key.stringValue == "id" {
+            if let id = record.recordID.recordName as? T {
+                return id
+            } else {
+                throw CKCodableError(
+                    .typeMismatch,
+                    context: ["Error:": "Couldn't convert value \(Swift.type(of: record.recordID.recordName)) to \(String(describing: type))"]
+                )
+            }
+        } else {
+            try checkCanDecodeValue(forKey: key)
+        }
         
         // Decode an unique CKRecord.Reference
         if let reference = record[key.stringValue] as? CKRecord.Reference {

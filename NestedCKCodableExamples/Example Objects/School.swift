@@ -11,31 +11,35 @@ import UIKit
 import NestedCloudKitCodable
 
 struct School: CKCodable {
-    
     var cloudKitRecordType: String {
         return "School"
     }
-    var cloudKitIdentifier: String {
-        return id
-    }
     
-    var id = UUID().uuidString
-    var name: String!
-    var location: CLLocation!
-    var students: [Person]!
-    var director: Person!
-    var books: [Book]!
-    
-    init() { }
+    var id: String
+    var name: String
+    var location: CLLocation
+    var students: [Person]
+    var director: Person
+    var books: [Book]
     
     private enum CodingKeys: String, CodingKey {
-        case name, location, students, director, books
+        case id, name, location, students, director, books
+    }
+    
+    init(id: String = UUID().uuidString, name: String, location: CLLocation, students: [Person], director: Person, books: [Book]) {
+        self.id = id
+        self.name = name
+        self.location = location
+        self.students = students
+        self.director = director
+        self.books = books
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         self.name = try container.decode(String.self, forKey: .name)
+        self.id = try container.decode(String.self, forKey: .id)
         
         let stringLocation = try container.decode(String.self, forKey: .location)
         let splitedLocation = stringLocation.split(separator: ";")

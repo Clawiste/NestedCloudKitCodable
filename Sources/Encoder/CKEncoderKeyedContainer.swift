@@ -33,7 +33,7 @@ extension CKEncoderKeyedContainer {
     
     var recordID: CKRecord.ID {
         let normalizedZone = zoneID ?? CKRecordZone.ID(zoneName: CKRecordZone.ID.defaultZoneName, ownerName: CKCurrentUserDefaultName)
-        return CKRecord.ID(recordName: object.cloudKitIdentifier, zoneID: normalizedZone)
+        return CKRecord.ID(recordName: object.id, zoneID: normalizedZone)
     }
     
     var generatedRecord: CKRecord {
@@ -209,7 +209,7 @@ extension CKEncoderKeyedContainer: KeyedEncodingContainerProtocol {
     }
     
     private func produceReference(for value: CKEncodable) throws -> CKRecord.Reference {
-        let recordID = CKRecord.ID(recordName: value.cloudKitIdentifier)
+        let recordID = CKRecord.ID(recordName: value.id)
         return CKRecord.Reference(recordID: recordID, action: .deleteSelf)
     }
     

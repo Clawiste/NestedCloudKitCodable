@@ -44,12 +44,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var schoolObject = School()
-        schoolObject.name = "School Name"
-        schoolObject.location = CLLocation(latitude: 37.331274, longitude: -122.030397)
-        schoolObject.students = students
-        schoolObject.director = director
-        schoolObject.books = books
+        let schoolObject = School(
+            name: "School Name",
+            location: CLLocation(latitude: 37.331274, longitude: -122.030397),
+            students: students,
+            director: director,
+            books: books
+        )
         
         do {
             let encodedRecords = try CKRecordEncoder().encode(schoolObject)
