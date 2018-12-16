@@ -75,6 +75,8 @@ extension CKEncoderKeyedContainer: KeyedEncodingContainerProtocol {
             try encodeCKRecordValue(ckValue, forKey: key)
             return
         }
+        
+        throw CKCodableError(.typeMismatch)
     }
     
     // MARK: Auxiliar Encode functions
